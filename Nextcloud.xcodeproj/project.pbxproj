@@ -69,6 +69,7 @@
 		AFCE353727E4ED7B00FEA6C2 /* NCShareCells.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFCE353627E4ED7B00FEA6C2 /* NCShareCells.swift */; };
 		AFCE353927E5DE0500FEA6C2 /* NCShare+Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFCE353827E5DE0400FEA6C2 /* NCShare+Helper.swift */; };
 		AFD33240276A02C100F5AE02 /* UIApplication+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFD3323F276A02C000F5AE02 /* UIApplication+Extension.swift */; };
+		B3ECE3DC2AC6C1530050BD1F /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = B3ECE3DB2AC6C1530050BD1F /* GoogleService-Info.plist */; };
 		C0046CDD2A17B98400D87C9D /* LoginUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0046CDC2A17B98400D87C9D /* LoginUITests.swift */; };
 		C03BA14A2A17BC57002C8BA3 /* XLForm in Frameworks */ = {isa = PBXBuildFile; productRef = C03BA1492A17BC57002C8BA3 /* XLForm */; };
 		C03BA14C2A17BC60002C8BA3 /* UICKeyChainStore in Frameworks */ = {isa = PBXBuildFile; productRef = C03BA14B2A17BC60002C8BA3 /* UICKeyChainStore */; };
@@ -797,6 +798,7 @@
 		AFCE353627E4ED7B00FEA6C2 /* NCShareCells.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NCShareCells.swift; sourceTree = "<group>"; };
 		AFCE353827E5DE0400FEA6C2 /* NCShare+Helper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NCShare+Helper.swift"; sourceTree = "<group>"; };
 		AFD3323F276A02C000F5AE02 /* UIApplication+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIApplication+Extension.swift"; sourceTree = "<group>"; };
+		B3ECE3DB2AC6C1530050BD1F /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		C0046CDA2A17B98400D87C9D /* NextcloudUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NextcloudUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		C0046CDC2A17B98400D87C9D /* LoginUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginUITests.swift; sourceTree = "<group>"; };
 		C04E2F202A17BB4D001BAD85 /* NextcloudIntegrationTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NextcloudIntegrationTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -2347,6 +2349,7 @@
 			children = (
 				F30A96302A27AEBF00D7BCFE /* EnvVars.generated.swift */,
 				F7B8B82F25681C3400967775 /* GoogleService-Info.plist */,
+				B3ECE3DB2AC6C1530050BD1F /* GoogleService-Info.plist */,
 				F7C1CDD91E6DFC6F005D92BE /* Brand */,
 				F7F67BAA1A24D27800EE80DA /* iOSClient */,
 				F7F67BAB1A24D27800EE80DA /* Supporting Files */,
@@ -3177,6 +3180,7 @@
 				F7AE00FA230E81EB007ACF8A /* NCBrowserWeb.storyboard in Resources */,
 				F7EDE514262DC2CD00414FE6 /* NCSelectCommandViewSelect+CreateFolder.xib in Resources */,
 				F78ACD58219048040088454D /* NCSectionHeaderMenu.xib in Resources */,
+				B3ECE3DC2AC6C1530050BD1F /* GoogleService-Info.plist in Resources */,
 				F7501C322212E57500FB1415 /* NCMedia.storyboard in Resources */,
 				F74DE14425135B6800917068 /* NCTransfers.storyboard in Resources */,
 				F77910A525DD517B00CEDB9E /* Settings.bundle in Resources */,
@@ -4452,6 +4456,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = "$(SRCROOT)/Brand/iOSClient.entitlements";
 				INFOPLIST_FILE = "$(SRCROOT)/Brand/iOSClient.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = "G-Share";
 				PRODUCT_BUNDLE_IDENTIFIER = "it.twsweb.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "$(SRCROOT)/iOSClient/Nextcloud-Bridging-Header.h";
@@ -4465,6 +4470,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = "$(SRCROOT)/Brand/iOSClient.entitlements";
 				INFOPLIST_FILE = "$(SRCROOT)/Brand/iOSClient.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = "G-Share";
 				PRODUCT_BUNDLE_IDENTIFIER = "it.twsweb.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "$(SRCROOT)/iOSClient/Nextcloud-Bridging-Header.h";
