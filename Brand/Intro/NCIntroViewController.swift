@@ -76,18 +76,18 @@ class NCIntroViewController: UIViewController, UICollectionViewDataSource, UICol
         buttonLogin.backgroundColor = textColor
         buttonLogin.setTitle(NSLocalizedString("_log_in_", comment: ""), for: .normal)
 
-        buttonSignUp.layer.cornerRadius = 20
-        buttonSignUp.layer.borderColor = textColor.cgColor
-        buttonSignUp.layer.borderWidth = 1.0
-        buttonSignUp.setTitleColor(textColor, for: .normal)
-        buttonSignUp.backgroundColor = NCBrandColor.shared.customer
-        buttonSignUp.titleLabel?.adjustsFontSizeToFitWidth = true
-        buttonSignUp.titleEdgeInsets = UIEdgeInsets(top: 0, left: 10, bottom: 0, right: 10)
-        buttonSignUp.setTitle(NSLocalizedString("_sign_up_", comment: ""), for: .normal)
+//        buttonSignUp.layer.cornerRadius = 20
+//        buttonSignUp.layer.borderColor = textColor.cgColor
+//        buttonSignUp.layer.borderWidth = 1.0
+//        buttonSignUp.setTitleColor(textColor, for: .normal)
+//        buttonSignUp.backgroundColor = NCBrandColor.shared.customer
+//        buttonSignUp.titleLabel?.adjustsFontSizeToFitWidth = true
+//        buttonSignUp.titleEdgeInsets = UIEdgeInsets(top: 0, left: 10, bottom: 0, right: 10)
+//        buttonSignUp.setTitle(NSLocalizedString("_sign_up_", comment: ""), for: .normal)
 
-        buttonHost.layer.cornerRadius = 20
-        buttonHost.setTitle(NSLocalizedString("_host_your_own_server", comment: ""), for: .normal)
-        buttonHost.setTitleColor(textColor.withAlphaComponent(0.5), for: .normal)
+//        buttonHost.layer.cornerRadius = 20
+//        buttonHost.setTitle(NSLocalizedString("_host_your_own_server", comment: ""), for: .normal)
+//        buttonHost.setTitleColor(textColor.withAlphaComponent(0.5), for: .normal)
 
         introCollectionView.register(UINib(nibName: "NCIntroCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: "introCell")
         introCollectionView.dataSource = self
