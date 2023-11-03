@@ -65,6 +65,7 @@ class NCLogin: UIViewController, UITextFieldDelegate, NCLoginQRCodeDelegate {
         imageBrand.image = UIImage(named: "logo")
 
         // Url
+        baseUrl.text = "https://g-drive.gov.la"
         baseUrl.textColor = textColor
         baseUrl.tintColor = textColor
         baseUrl.layer.cornerRadius = 10

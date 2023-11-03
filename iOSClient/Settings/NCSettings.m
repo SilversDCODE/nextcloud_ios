@@ -161,17 +161,17 @@
     [form addFormSection:section];
     
     // Acknowledgements
-    row = [XLFormRowDescriptor formRowDescriptorWithTag:@"buttonLeftAligned" rowType:XLFormRowDescriptorTypeButton title:NSLocalizedString(@"_acknowledgements_", nil)];
-    row.cellConfigAtConfigure[@"backgroundColor"] = UIColor.secondarySystemGroupedBackgroundColor;
-    [row.cellConfig setObject:[UIFont systemFontOfSize:15.0] forKey:@"textLabel.font"];
-    [row.cellConfig setObject:@(NSTextAlignmentLeft) forKey:@"textLabel.textAlignment"];
-    [row.cellConfig setObject:UIColor.labelColor forKey:@"textLabel.textColor"];
-    [row.cellConfig setObject:[[UIImage imageNamed:@"acknowledgements"] imageWithColor:UIColor.systemGrayColor size:25] forKey:@"imageView.image"];
-    row.action.formBlock = ^(XLFormRowDescriptor * sender){
-        [self performSegueWithIdentifier:@"AcknowledgementsSegue" sender:sender];
-        [self deselectFormRow:sender];
-    };
-    [section addFormRow:row];
+//    row = [XLFormRowDescriptor formRowDescriptorWithTag:@"buttonLeftAligned" rowType:XLFormRowDescriptorTypeButton title:NSLocalizedString(@"_acknowledgements_", nil)];
+//    row.cellConfigAtConfigure[@"backgroundColor"] = UIColor.secondarySystemGroupedBackgroundColor;
+//    [row.cellConfig setObject:[UIFont systemFontOfSize:15.0] forKey:@"textLabel.font"];
+//    [row.cellConfig setObject:@(NSTextAlignmentLeft) forKey:@"textLabel.textAlignment"];
+//    [row.cellConfig setObject:UIColor.labelColor forKey:@"textLabel.textColor"];
+//    [row.cellConfig setObject:[[UIImage imageNamed:@"acknowledgements"] imageWithColor:UIColor.systemGrayColor size:25] forKey:@"imageView.image"];
+//    row.action.formBlock = ^(XLFormRowDescriptor * sender){
+//        [self performSegueWithIdentifier:@"AcknowledgementsSegue" sender:sender];
+//        [self deselectFormRow:sender];
+//    };
+//    [section addFormRow:row];
     
     if (!NCBrandOptions.shared.disable_crash_service) {
         
@@ -186,14 +186,14 @@
         [section addFormRow:row];
         
         // Source code
-        row = [XLFormRowDescriptor formRowDescriptorWithTag:@"sourcecode" rowType:XLFormRowDescriptorTypeButton title:NSLocalizedString(@"_source_code_", nil)];
-        row.cellConfigAtConfigure[@"backgroundColor"] = UIColor.secondarySystemGroupedBackgroundColor;
-        [row.cellConfig setObject:[UIFont systemFontOfSize:15.0] forKey:@"textLabel.font"];
-        [row.cellConfig setObject:@(NSTextAlignmentLeft) forKey:@"textLabel.textAlignment"];
-        [row.cellConfig setObject:UIColor.labelColor forKey:@"textLabel.textColor"];
-        [row.cellConfig setObject:[[UIImage imageNamed:@"gitHub"] imageWithColor:UIColor.systemGrayColor size:25] forKey:@"imageView.image"];
-        row.action.formSelector = @selector(sourceCode:);
-        [section addFormRow:row];
+//        row = [XLFormRowDescriptor formRowDescriptorWithTag:@"sourcecode" rowType:XLFormRowDescriptorTypeButton title:NSLocalizedString(@"_source_code_", nil)];
+//        row.cellConfigAtConfigure[@"backgroundColor"] = UIColor.secondarySystemGroupedBackgroundColor;
+//        [row.cellConfig setObject:[UIFont systemFontOfSize:15.0] forKey:@"textLabel.font"];
+//        [row.cellConfig setObject:@(NSTextAlignmentLeft) forKey:@"textLabel.textAlignment"];
+//        [row.cellConfig setObject:UIColor.labelColor forKey:@"textLabel.textColor"];
+//        [row.cellConfig setObject:[[UIImage imageNamed:@"gitHub"] imageWithColor:UIColor.systemGrayColor size:25] forKey:@"imageView.image"];
+//        row.action.formSelector = @selector(sourceCode:);
+//        [section addFormRow:row];
     }
     
     self.tableView.showsVerticalScrollIndicator = NO;
@@ -465,7 +465,7 @@
         NSString *versionNextcloud = [NSString stringWithFormat:[NCBrandOptions shared].textCopyrightNextcloudServer, versionServer];
         NSString *versionNextcloudiOS = [NSString stringWithFormat:[NCBrandOptions shared].textCopyrightNextcloudiOS, [[NCUtility shared] getVersionAppWithBuild:true]];
         NSString *nameSlogan = [NSString stringWithFormat:@"%@ - %@", themingName, themingSlogan];
-        sectionName = [NSString stringWithFormat:@"\n%@\n\n%@\n%@", versionNextcloudiOS, versionNextcloud, nameSlogan];
+        sectionName = [NSString stringWithFormat:@"\n%@", nameSlogan];
     }
     return sectionName;
 }

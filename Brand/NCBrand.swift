@@ -39,7 +39,7 @@ import UIKit
     @objc public var linkLoginHost: String = "https://nextcloud.com/install"
     @objc public var linkloginPreferredProviders: String = "https://nextcloud.com/signup-ios"
     @objc public var webLoginAutenticationProtocol: String = "nc://"                                                // example "abc://"
-    @objc public var privacy: String = "https://nextcloud.com/privacy"
+    @objc public var privacy: String = "https://g-drive.gov.la/privacypolicy.html"
     @objc public var sourceCode: String = "https://github.com/nextcloud/ios"
     @objc public var mobileconfig: String = "/remote.php/dav/provisioning/apple-provisioning.mobileconfig"
 
