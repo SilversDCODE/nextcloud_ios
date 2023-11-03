@@ -3995,7 +3995,7 @@
 					EXTENSION_NOTIFICATION_SERVICE,
 				);
 				INFOPLIST_FILE = "$(SRCROOT)/Brand/Notification_Service_Extension.plist";
-				PRODUCT_BUNDLE_IDENTIFIER = "it.twsweb.Nextcloud.Notification-Service-Extension";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.gov.mpt.GShare.Notification-Service-Extension";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) EXTENSION EXTENSION_NOTIFICATION_SERVICE";
 				SWIFT_OBJC_BRIDGING_HEADER = "$(SRCROOT)/Notification Service Extension/Notification_Service_Extension-Bridging-Header.h";
@@ -4012,7 +4012,7 @@
 					EXTENSION_NOTIFICATION_SERVICE,
 				);
 				INFOPLIST_FILE = "$(SRCROOT)/Brand/Notification_Service_Extension.plist";
-				PRODUCT_BUNDLE_IDENTIFIER = "it.twsweb.Nextcloud.Notification-Service-Extension";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.gov.mpt.GShare.Notification-Service-Extension";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) EXTENSION EXTENSION_NOTIFICATION_SERVICE";
 				SWIFT_OBJC_BRIDGING_HEADER = "$(SRCROOT)/Notification Service Extension/Notification_Service_Extension-Bridging-Header.h";
@@ -4026,8 +4026,9 @@
 				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Apple Development";
 				ENABLE_HARDENED_RUNTIME = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "Copyright © 2023 Nextcloud. All rights reserved.";
 				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
-				PRODUCT_BUNDLE_IDENTIFIER = it.twsweb.NextcloudTests;
+				PRODUCT_BUNDLE_IDENTIFIER = com.gov.mpt.GShare.NextcloudTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "$(SRCROOT)/iOSClient/Nextcloud-Bridging-Header.h";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Nextcloud.app/Nextcloud";
@@ -4041,8 +4042,9 @@
 				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Apple Development";
 				ENABLE_HARDENED_RUNTIME = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "Copyright © 2023 Nextcloud. All rights reserved.";
 				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
-				PRODUCT_BUNDLE_IDENTIFIER = it.twsweb.NextcloudTests;
+				PRODUCT_BUNDLE_IDENTIFIER = com.gov.mpt.GShare.NextcloudTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "$(SRCROOT)/iOSClient/Nextcloud-Bridging-Header.h";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Nextcloud.app/Nextcloud";
@@ -4075,11 +4077,12 @@
 				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "Copyright © 2023 Nextcloud. All rights reserved.";
 				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
 				MARKETING_VERSION = 1.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
-				PRODUCT_BUNDLE_IDENTIFIER = it.twsweb.NextcloudUITests.NextcloudUITests;
+				PRODUCT_BUNDLE_IDENTIFIER = com.gov.mpt.GShare.NextcloudUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_EMIT_LOC_STRINGS = NO;
@@ -4112,11 +4115,12 @@
 				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "Copyright © 2023 Nextcloud. All rights reserved.";
 				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
 				MARKETING_VERSION = 1.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
-				PRODUCT_BUNDLE_IDENTIFIER = it.twsweb.NextcloudUITests.NextcloudUITests;
+				PRODUCT_BUNDLE_IDENTIFIER = com.gov.mpt.GShare.NextcloudUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_OBJC_BRIDGING_HEADER = "$(SRCROOT)/iOSClient/Nextcloud-Bridging-Header.h";
@@ -4154,11 +4158,12 @@
 				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "Copyright © 2023 Nextcloud. All rights reserved.";
 				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
 				MARKETING_VERSION = 1.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
-				PRODUCT_BUNDLE_IDENTIFIER = it.twsweb.NextcloudIntegrationTests.NextcloudIntegrationTests;
+				PRODUCT_BUNDLE_IDENTIFIER = com.gov.mpt.GShare.NextcloudIntegrationTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_EMIT_LOC_STRINGS = NO;
@@ -4192,11 +4197,12 @@
 				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "Copyright © 2023 Nextcloud. All rights reserved.";
 				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
 				MARKETING_VERSION = 1.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
-				PRODUCT_BUNDLE_IDENTIFIER = it.twsweb.NextcloudIntegrationTests.NextcloudIntegrationTests;
+				PRODUCT_BUNDLE_IDENTIFIER = com.gov.mpt.GShare.NextcloudIntegrationTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_OBJC_BRIDGING_HEADER = "$(SRCROOT)/iOSClient/Nextcloud-Bridging-Header.h";
@@ -4233,11 +4239,12 @@
 				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "Copyright © 2023 Nextcloud. All rights reserved.";
 				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
 				MARKETING_VERSION = 1.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
-				PRODUCT_BUNDLE_IDENTIFIER = it.twsweb.NextcloudSnapshotTests;
+				PRODUCT_BUNDLE_IDENTIFIER = com.gov.mpt.GShare.NextcloudSnapshotTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_EMIT_LOC_STRINGS = NO;
@@ -4271,11 +4278,12 @@
 				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "Copyright © 2023 Nextcloud. All rights reserved.";
 				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
 				MARKETING_VERSION = 1.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
-				PRODUCT_BUNDLE_IDENTIFIER = it.twsweb.NextcloudSnapshotTests;
+				PRODUCT_BUNDLE_IDENTIFIER = com.gov.mpt.GShare.NextcloudSnapshotTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_OBJC_BRIDGING_HEADER = "$(SRCROOT)/iOSClient/Nextcloud-Bridging-Header.h";
@@ -4299,7 +4307,7 @@
 				INFOPLIST_KEY_CFBundleDisplayName = "File Provider Extension UI";
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
-				PRODUCT_BUNDLE_IDENTIFIER = "it.twsweb.Nextcloud.File-Provider-Extension-UI";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.gov.mpt.GShare.File-Provider-Extension-UI";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) EXTENSION EXTENSION_FILE_PROVIDER_EXTENSION_UI";
 				SWIFT_OBJC_BRIDGING_HEADER = "$(SRCROOT)/File Provider Extension UI/FileProviderExtensionUI-Bridging-Header.h";
@@ -4319,7 +4327,7 @@
 				INFOPLIST_KEY_CFBundleDisplayName = "File Provider Extension UI";
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
-				PRODUCT_BUNDLE_IDENTIFIER = "it.twsweb.Nextcloud.File-Provider-Extension-UI";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.gov.mpt.GShare.File-Provider-Extension-UI";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) EXTENSION EXTENSION_FILE_PROVIDER_EXTENSION_UI";
 				SWIFT_OBJC_BRIDGING_HEADER = "$(SRCROOT)/File Provider Extension UI/FileProviderExtensionUI-Bridging-Header.h";
@@ -4336,7 +4344,7 @@
 					EXTENSION_SHARE,
 				);
 				INFOPLIST_FILE = "$(SRCROOT)/Brand/Share.plist";
-				PRODUCT_BUNDLE_IDENTIFIER = it.twsweb.Nextcloud.Share;
+				PRODUCT_BUNDLE_IDENTIFIER = com.gov.mpt.GShare.Share;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) EXTENSION EXTENSION_SHARE";
 				SWIFT_OBJC_BRIDGING_HEADER = "$(SRCROOT)/Share/Share-Bridging-Header.h";
@@ -4353,7 +4361,7 @@
 					EXTENSION_SHARE,
 				);
 				INFOPLIST_FILE = "$(SRCROOT)/Brand/Share.plist";
-				PRODUCT_BUNDLE_IDENTIFIER = it.twsweb.Nextcloud.Share;
+				PRODUCT_BUNDLE_IDENTIFIER = com.gov.mpt.GShare.Share;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) EXTENSION EXTENSION_SHARE";
 				SWIFT_OBJC_BRIDGING_HEADER = "$(SRCROOT)/Share/Share-Bridging-Header.h";
@@ -4377,9 +4385,10 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "$(SRCROOT)/Brand/Widget.plist";
 				INFOPLIST_KEY_CFBundleDisplayName = Nextcloud;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "Copyright © 2023 Nextcloud. All rights reserved.";
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
-				PRODUCT_BUNDLE_IDENTIFIER = it.twsweb.Nextcloud.Widget;
+				PRODUCT_BUNDLE_IDENTIFIER = com.gov.mpt.GShare.Widget;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) EXTENSION EXTENSION_WIDGET";
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -4404,9 +4413,10 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "$(SRCROOT)/Brand/Widget.plist";
 				INFOPLIST_KEY_CFBundleDisplayName = Nextcloud;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "Copyright © 2023 Nextcloud. All rights reserved.";
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
-				PRODUCT_BUNDLE_IDENTIFIER = it.twsweb.Nextcloud.Widget;
+				PRODUCT_BUNDLE_IDENTIFIER = com.gov.mpt.GShare.Widget;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) EXTENSION EXTENSION_WIDGET";
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -4425,7 +4435,7 @@
 					EXTENSION_FILE_PROVIDER_EXTENSION,
 				);
 				INFOPLIST_FILE = "$(SRCROOT)/Brand/File_Provider_Extension.plist";
-				PRODUCT_BUNDLE_IDENTIFIER = "it.twsweb.Nextcloud.File-Provider-Extension";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.gov.mpt.GShare.File-Provider-Extension";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) EXTENSION EXTENSION_FILE_PROVIDER_EXTENSION";
 				SWIFT_OBJC_BRIDGING_HEADER = "$(SRCROOT)/File Provider Extension/FileProviderExtension-Bridging-Header.h";
@@ -4442,7 +4452,7 @@
 					EXTENSION_FILE_PROVIDER_EXTENSION,
 				);
 				INFOPLIST_FILE = "$(SRCROOT)/Brand/File_Provider_Extension.plist";
-				PRODUCT_BUNDLE_IDENTIFIER = "it.twsweb.Nextcloud.File-Provider-Extension";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.gov.mpt.GShare.File-Provider-Extension";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) EXTENSION EXTENSION_FILE_PROVIDER_EXTENSION";
 				SWIFT_OBJC_BRIDGING_HEADER = "$(SRCROOT)/File Provider Extension/FileProviderExtension-Bridging-Header.h";
@@ -4455,9 +4465,10 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = "$(SRCROOT)/Brand/iOSClient.entitlements";
+				DEVELOPMENT_TEAM = Q3KSD8JS33;
 				INFOPLIST_FILE = "$(SRCROOT)/Brand/iOSClient.plist";
 				INFOPLIST_KEY_CFBundleDisplayName = "G-Share";
-				PRODUCT_BUNDLE_IDENTIFIER = "it.twsweb.$(PRODUCT_NAME:rfc1034identifier)";
+				PRODUCT_BUNDLE_IDENTIFIER = com.gov.mpt.GShare;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "$(SRCROOT)/iOSClient/Nextcloud-Bridging-Header.h";
 			};
@@ -4469,9 +4480,10 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = "$(SRCROOT)/Brand/iOSClient.entitlements";
+				DEVELOPMENT_TEAM = Q3KSD8JS33;
 				INFOPLIST_FILE = "$(SRCROOT)/Brand/iOSClient.plist";
 				INFOPLIST_KEY_CFBundleDisplayName = "G-Share";
-				PRODUCT_BUNDLE_IDENTIFIER = "it.twsweb.$(PRODUCT_NAME:rfc1034identifier)";
+				PRODUCT_BUNDLE_IDENTIFIER = com.gov.mpt.GShare;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "$(SRCROOT)/iOSClient/Nextcloud-Bridging-Header.h";
 			};
@@ -4500,9 +4512,10 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "$(SRCROOT)/Brand/WidgetDashboardIntentHandler.plist";
 				INFOPLIST_KEY_CFBundleDisplayName = WidgetDashboardIntentHandler;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "Copyright © 2023 Nextcloud. All rights reserved.";
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
-				PRODUCT_BUNDLE_IDENTIFIER = it.twsweb.Nextcloud.WidgetDashboardIntentHandler;
+				PRODUCT_BUNDLE_IDENTIFIER = com.gov.mpt.GShare.WidgetDashboardIntentHandler;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) EXTENSION EXTENSION_WIDGETDASHBOARDINTENTHANDLER";
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -4534,9 +4547,10 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "$(SRCROOT)/Brand/WidgetDashboardIntentHandler.plist";
 				INFOPLIST_KEY_CFBundleDisplayName = WidgetDashboardIntentHandler;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "Copyright © 2023 Nextcloud. All rights reserved.";
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
-				PRODUCT_BUNDLE_IDENTIFIER = it.twsweb.Nextcloud.WidgetDashboardIntentHandler;
+				PRODUCT_BUNDLE_IDENTIFIER = com.gov.mpt.GShare.WidgetDashboardIntentHandler;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) EXTENSION EXTENSION_WIDGETDASHBOARDINTENTHANDLER";
 				SWIFT_EMIT_LOC_STRINGS = YES;
