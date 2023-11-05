@@ -11,7 +11,7 @@
 	</array>
 	<key>keychain-access-groups</key>
 	<array>
-		<string>$(AppIdentifierPrefix)it.twsweb.Crypto-Cloud</string>
+		<string>$(AppIdentifierPrefix)com.gov.mpt.GShare.Crypto-Cloud</string>
 	</array>
 </dict>
 </plist>
