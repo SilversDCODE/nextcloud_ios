@@ -31,7 +31,7 @@ import UIKit
         return instance
     }()
 
-    @objc public var brand: String = "Nextcloud"
+    @objc public var brand: String = "G-Share"
     @objc public var textCopyrightNextcloudiOS: String = "Nextcloud Liquid for iOS %@ © 2023"
     @objc public var textCopyrightNextcloudServer: String = "Nextcloud Server %@"
     @objc public var loginBaseUrl: String = "https://g-drive.gov.la"
