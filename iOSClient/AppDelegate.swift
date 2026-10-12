@@ -32,6 +32,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterD
     var pushSubscriptionTask: Task<Void, Never>?
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
+        NCLanguageManager.shared.applyLanguage()
+
         if isUiTestingEnabled {
             Task {
                 await NCAccount().deleteAllAccounts()

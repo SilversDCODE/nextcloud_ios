@@ -145,6 +145,9 @@ class NCLogin: UIViewController, UITextFieldDelegate, NCLoginQRCodeDelegate {
         NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillHide(_:)), name: UIResponder.keyboardWillHideNotification, object: nil)
 
         handleLoginWithAppConfig()
+        if urlBase.isEmpty {
+            urlBase = NCBrandOptions.shared.loginBaseUrl
+        }
         baseUrlTextField.text = urlBase
 
         enforceServersButton.setTitle(NSLocalizedString("_select_server_", comment: ""), for: .normal)

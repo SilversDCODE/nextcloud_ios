@@ -61,25 +61,25 @@ struct NextcloudVersion: Comparable {
 final class NCBrandOptions: @unchecked Sendable {
     static let shared = NCBrandOptions()
 
-    var brand: String = "Nextcloud"
-    var brandUserAgent: String = ""
-    var textCopyrightNextcloudiOS: String = "Nextcloud Matheria for iOS %@ © 2026"
-    var textCopyrightNextcloudServer: String = "Nextcloud Server %@"
-    var loginBaseUrl: String = "https://cloud.nextcloud.com"
+    var brand: String = "G-Share"
+    var brandUserAgent: String = "G-Share"
+    var textCopyrightNextcloudiOS: String = "G-Share for iOS %@ © 2026"
+    var textCopyrightNextcloudServer: String = ""
+    var loginBaseUrl: String = "https://g-drive.gov.la"
     var pushNotificationServerProxy: String = ""
-    var linkLoginHost: String = "https://nextcloud.com/install"
-    var linkloginPreferredProviders: String = "https://nextcloud.com/signup-ios"
+    var linkLoginHost: String = ""
+    var linkloginPreferredProviders: String = ""
     var webLoginAutenticationProtocol: String = "nc://"                                        // example "abc://"
-    var privacy: String = "https://nextcloud.com/privacy"
-    var sourceCode: String = "https://github.com/nextcloud/ios"
+    var privacy: String = "https://g-drive.gov.la/privacypolicy.html"
+    var sourceCode: String = ""
     var mobileconfig: String = "/remote.php/dav/provisioning/apple-provisioning.mobileconfig"
-    var appStoreUrl: String = "https://apps.apple.com/in/app/nextcloud/id1125420102"
+    var appStoreUrl: String = ""
 
     // Auto Upload default folder
     var folderDefaultAutoUpload: String = "Photos"
 
     // Capabilities Group
-    var capabilitiesGroup: String = "group.it.twsweb.Crypto-Cloud"
+    var capabilitiesGroup: String = "group.com.gov.mpt.GShare"
     var capabilitiesGroupApps: String = "group.com.nextcloud.apps"
 
     // BRAND ONLY
@@ -91,14 +91,14 @@ final class NCBrandOptions: @unchecked Sendable {
     var disable_intro: Bool = false
     var disable_request_login_url: Bool = false
     var disable_multiaccount: Bool = false
-    var disable_more_external_site: Bool = false
+    var disable_more_external_site: Bool = true
     var disable_openin_file: Bool = false                                                       // Don't touch me !!
-    var disable_crash_service: Bool = false
+    var disable_crash_service: Bool = true
     var disable_log: Bool = false
     var disable_mobileconfig: Bool = false  
-    var disable_show_more_nextcloud_apps_in_settings: Bool = false
+    var disable_show_more_nextcloud_apps_in_settings: Bool = true
     var doNotAskPasscodeAtStartup: Bool = false
-    var disable_source_code_in_settings: Bool = false
+    var disable_source_code_in_settings: Bool = true
     var enforce_passcode_lock = false
     var enforce_privacyScreenEnabled = false
 
@@ -176,7 +176,7 @@ final class NCBrandColor: @unchecked Sendable {
     static let shared = NCBrandColor()
 
     // This is rewrited from customet theme, default is Nextcloud color
-    let customer: UIColor = UIColor(red: 0.0 / 255.0, green: 130.0 / 255.0, blue: 201.0 / 255.0, alpha: 1.0) // Nextcloud default: #0082C9
+    let customer: UIColor = UIColor(red: 13.0 / 255.0, green: 181.0 / 255.0, blue: 141.0 / 255.0, alpha: 1.0) // G-Share: #0DB58D
     var customerText: UIColor = .white
 
     // INTERNAL DEFINE COLORS

@@ -116,7 +116,6 @@
 		D5B6AA7827200C7200D49C24 /* NCActivityTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5B6AA7727200C7200D49C24 /* NCActivityTableViewCell.swift */; };
 		F0A1B2C430B5000100D4E5F6 /* NCMediaViewerFloatingTitleViewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0A1B2C330B5000100D4E5F6 /* NCMediaViewerFloatingTitleViewTests.swift */; };
 		F0A1B2C630B6000100D4E5F6 /* NCImageZoomViewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0A1B2C530B6000100D4E5F6 /* NCImageZoomViewTests.swift */; };
-		F31165022F9674A1009A1E37 /* AppIcon.icon in Resources */ = {isa = PBXBuildFile; fileRef = F31165012F9674A1009A1E37 /* AppIcon.icon */; };
 		F317C82E2E844C5300761AEA /* ClientIntegrationUIViewer.swift in Sources */ = {isa = PBXBuildFile; fileRef = F317C82D2E844C5300761AEA /* ClientIntegrationUIViewer.swift */; };
 		F321DA8A2B71205A00DDA0E6 /* NCTrashSelectTabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = F321DA892B71205A00DDA0E6 /* NCTrashSelectTabBar.swift */; };
 		F32FADA92D1176E3007035E2 /* UIButton+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F32FADA82D1176DE007035E2 /* UIButton+Extension.swift */; };
@@ -801,6 +800,7 @@
 		F79ED0F22D2FCA6A00A389D9 /* NCRecommendationsCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F75D901E2D2BE12E003E740B /* NCRecommendationsCell.xib */; };
 		F79FFB262A97C24A0055EEA4 /* NCNetworkingE2EEMarkFolder.swift in Sources */ = {isa = PBXBuildFile; fileRef = F79FFB252A97C24A0055EEA4 /* NCNetworkingE2EEMarkFolder.swift */; };
 		F79FFB272A97C24A0055EEA4 /* NCNetworkingE2EEMarkFolder.swift in Sources */ = {isa = PBXBuildFile; fileRef = F79FFB252A97C24A0055EEA4 /* NCNetworkingE2EEMarkFolder.swift */; };
+		F7A000022E9B000100000001 /* NCLanguageManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7A000012E9B000100000001 /* NCLanguageManager.swift */; };
 		F7A03E2F2D425A14007AA677 /* NCFavoriteNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7A03E2E2D425A14007AA677 /* NCFavoriteNavigationController.swift */; };
 		F7A03E332D426115007AA677 /* NCMoreNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7A03E322D426115007AA677 /* NCMoreNavigationController.swift */; };
 		F7A03E352D427312007AA677 /* NCMainNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7A03E342D427308007AA677 /* NCMainNavigationController.swift */; };
@@ -1861,6 +1861,7 @@
 		F79B645F26CA661600838ACA /* UIControl+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIControl+Extension.swift"; sourceTree = "<group>"; };
 		F79B869A265E19D40085C0E0 /* NSMutableAttributedString+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSMutableAttributedString+Extension.swift"; sourceTree = "<group>"; };
 		F79FFB252A97C24A0055EEA4 /* NCNetworkingE2EEMarkFolder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NCNetworkingE2EEMarkFolder.swift; sourceTree = "<group>"; };
+		F7A000012E9B000100000001 /* NCLanguageManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NCLanguageManager.swift; sourceTree = "<group>"; };
 		F7A03E2E2D425A14007AA677 /* NCFavoriteNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NCFavoriteNavigationController.swift; sourceTree = "<group>"; };
 		F7A03E322D426115007AA677 /* NCMoreNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NCMoreNavigationController.swift; sourceTree = "<group>"; };
 		F7A03E342D427308007AA677 /* NCMainNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NCMainNavigationController.swift; sourceTree = "<group>"; };
@@ -3508,6 +3509,7 @@
 				F7F562FF2E15761500631A11 /* MigrationMultiDomains.swift */,
 				F76D364528A4F8BF00214537 /* NCActivityIndicator.swift */,
 				F7386E452DA90E02009A00F6 /* NCAppVersionManager.swift */,
+				F7A000012E9B000100000001 /* NCLanguageManager.swift */,
 				F733598025C1C188002ABA72 /* NCAskAuthorization.swift */,
 				F77C97382953131000FDDD09 /* NCCameraRoll.swift */,
 				F7A3DB8F2DDE238C008F7EC8 /* NCDebouncer.swift */,
@@ -4597,7 +4599,6 @@
 				F723985C253C95CE00257F49 /* NCViewerRichdocuments.storyboard in Resources */,
 				F758B45A212C564000515F55 /* NCScan.storyboard in Resources */,
 				F765F73225237E3F00391DBE /* NCRecent.storyboard in Resources */,
-				F31165022F9674A1009A1E37 /* AppIcon.icon in Resources */,
 				F78F74342163757000C2ADAD /* NCTrash.storyboard in Resources */,
 				F702F30225EE5D2C008F8E80 /* english.txt in Resources */,
 				F757CC8C29E82D0500F31428 /* NCGroupfolders.storyboard in Resources */,
@@ -5311,6 +5312,7 @@
 				F7DF7B422F1A36C100514020 /* HelperBanner.swift in Sources */,
 				F78ACD4A21903F850088454D /* NCTrashListCell.swift in Sources */,
 				F7386E482DA90E0F009A00F6 /* NCAppVersionManager.swift in Sources */,
+				F7A000022E9B000100000001 /* NCLanguageManager.swift in Sources */,
 				F76882352C0DD1E7001CF441 /* NCWebBrowserView.swift in Sources */,
 				F72CA0572F5048C3002E2F06 /* UIApplication+Extension.swift in Sources */,
 				F3A047972BD2668800658E7B /* NCAssistantEmptyView.swift in Sources */,
@@ -6016,7 +6018,7 @@
 				);
 				INFOPLIST_FILE = "$(SRCROOT)/Brand/Notification_Service_Extension.plist";
 				OTHER_LDFLAGS = "";
-				PRODUCT_BUNDLE_IDENTIFIER = "it.twsweb.Nextcloud.Notification-Service-Extension";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.gov.mpt.GShare.Notification-Service-Extension";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
 				SUPPORTS_MACCATALYST = NO;
@@ -6040,7 +6042,7 @@
 				);
 				INFOPLIST_FILE = "$(SRCROOT)/Brand/Notification_Service_Extension.plist";
 				OTHER_LDFLAGS = "";
-				PRODUCT_BUNDLE_IDENTIFIER = "it.twsweb.Nextcloud.Notification-Service-Extension";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.gov.mpt.GShare.Notification-Service-Extension";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
 				SUPPORTS_MACCATALYST = NO;
@@ -6062,7 +6064,7 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				OTHER_LDFLAGS = "";
-				PRODUCT_BUNDLE_IDENTIFIER = it.twsweb.NextcloudTests;
+				PRODUCT_BUNDLE_IDENTIFIER = com.gov.mpt.GShareTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
 				SUPPORTS_MACCATALYST = NO;
@@ -6087,7 +6089,7 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				OTHER_LDFLAGS = "";
-				PRODUCT_BUNDLE_IDENTIFIER = it.twsweb.NextcloudTests;
+				PRODUCT_BUNDLE_IDENTIFIER = com.gov.mpt.GShareTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
 				SUPPORTS_MACCATALYST = NO;
@@ -6133,7 +6135,7 @@
 				MTL_FAST_MATH = YES;
 				OTHER_CFLAGS = "-v";
 				OTHER_LDFLAGS = "";
-				PRODUCT_BUNDLE_IDENTIFIER = it.twsweb.NextcloudUITests.NextcloudUITests;
+				PRODUCT_BUNDLE_IDENTIFIER = com.gov.mpt.GShareUITests.NextcloudUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
 				SUPPORTS_MACCATALYST = NO;
@@ -6178,7 +6180,7 @@
 				MTL_FAST_MATH = YES;
 				OTHER_CFLAGS = "-v";
 				OTHER_LDFLAGS = "";
-				PRODUCT_BUNDLE_IDENTIFIER = it.twsweb.NextcloudUITests.NextcloudUITests;
+				PRODUCT_BUNDLE_IDENTIFIER = com.gov.mpt.GShareUITests.NextcloudUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
 				SUPPORTS_MACCATALYST = NO;
@@ -6227,7 +6229,7 @@
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				OTHER_LDFLAGS = "";
-				PRODUCT_BUNDLE_IDENTIFIER = it.twsweb.NextcloudIntegrationTests.NextcloudIntegrationTests;
+				PRODUCT_BUNDLE_IDENTIFIER = com.gov.mpt.GShareIntegrationTests.NextcloudIntegrationTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
 				SUPPORTS_MACCATALYST = NO;
@@ -6271,7 +6273,7 @@
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				OTHER_LDFLAGS = "";
-				PRODUCT_BUNDLE_IDENTIFIER = it.twsweb.NextcloudIntegrationTests.NextcloudIntegrationTests;
+				PRODUCT_BUNDLE_IDENTIFIER = com.gov.mpt.GShareIntegrationTests.NextcloudIntegrationTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
 				SUPPORTS_MACCATALYST = NO;
@@ -6304,7 +6306,7 @@
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				OTHER_LDFLAGS = "";
-				PRODUCT_BUNDLE_IDENTIFIER = "it.twsweb.Nextcloud.File-Provider-Extension-UI";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.gov.mpt.GShare.File-Provider-Extension-UI";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
 				SUPPORTS_MACCATALYST = NO;
@@ -6331,7 +6333,7 @@
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				OTHER_LDFLAGS = "";
-				PRODUCT_BUNDLE_IDENTIFIER = "it.twsweb.Nextcloud.File-Provider-Extension-UI";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.gov.mpt.GShare.File-Provider-Extension-UI";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
 				SUPPORTS_MACCATALYST = NO;
@@ -6354,7 +6356,7 @@
 				);
 				INFOPLIST_FILE = "$(SRCROOT)/Brand/Share.plist";
 				OTHER_LDFLAGS = "";
-				PRODUCT_BUNDLE_IDENTIFIER = it.twsweb.Nextcloud.Share;
+				PRODUCT_BUNDLE_IDENTIFIER = com.gov.mpt.GShare.Share;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SUPPORTED_PLATFORMS = "iphonesimulator iphoneos";
 				SUPPORTS_MACCATALYST = NO;
@@ -6378,7 +6380,7 @@
 				);
 				INFOPLIST_FILE = "$(SRCROOT)/Brand/Share.plist";
 				OTHER_LDFLAGS = "";
-				PRODUCT_BUNDLE_IDENTIFIER = it.twsweb.Nextcloud.Share;
+				PRODUCT_BUNDLE_IDENTIFIER = com.gov.mpt.GShare.Share;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SUPPORTED_PLATFORMS = "iphonesimulator iphoneos";
 				SUPPORTS_MACCATALYST = NO;
@@ -6411,7 +6413,7 @@
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				OTHER_LDFLAGS = "";
-				PRODUCT_BUNDLE_IDENTIFIER = it.twsweb.Nextcloud.Widget;
+				PRODUCT_BUNDLE_IDENTIFIER = com.gov.mpt.GShare.Widget;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
 				SUPPORTS_MACCATALYST = NO;
@@ -6445,7 +6447,7 @@
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				OTHER_LDFLAGS = "";
-				PRODUCT_BUNDLE_IDENTIFIER = it.twsweb.Nextcloud.Widget;
+				PRODUCT_BUNDLE_IDENTIFIER = com.gov.mpt.GShare.Widget;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
 				SUPPORTS_MACCATALYST = NO;
@@ -6471,7 +6473,7 @@
 				);
 				INFOPLIST_FILE = "$(SRCROOT)/Brand/File_Provider_Extension.plist";
 				OTHER_LDFLAGS = "";
-				PRODUCT_BUNDLE_IDENTIFIER = "it.twsweb.Nextcloud.File-Provider-Extension";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.gov.mpt.GShare.File-Provider-Extension";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
 				SUPPORTS_MACCATALYST = NO;
@@ -6494,7 +6496,7 @@
 				);
 				INFOPLIST_FILE = "$(SRCROOT)/Brand/File_Provider_Extension.plist";
 				OTHER_LDFLAGS = "";
-				PRODUCT_BUNDLE_IDENTIFIER = "it.twsweb.Nextcloud.File-Provider-Extension";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.gov.mpt.GShare.File-Provider-Extension";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
 				SUPPORTS_MACCATALYST = NO;
@@ -6511,11 +6513,13 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = NO;
 				CODE_SIGN_ENTITLEMENTS = "$(SRCROOT)/Brand/iOSClient.entitlements";
+				CURRENT_PROJECT_VERSION = 5;
 				DEAD_CODE_STRIPPING = YES;
 				GCC_SYMBOLS_PRIVATE_EXTERN = YES;
 				INFOPLIST_FILE = "$(SRCROOT)/Brand/iOSClient.plist";
+				MARKETING_VERSION = 1.0.3;
 				OTHER_LDFLAGS = "";
-				PRODUCT_BUNDLE_IDENTIFIER = "it.twsweb.$(PRODUCT_NAME:rfc1034identifier)";
+				PRODUCT_BUNDLE_IDENTIFIER = com.gov.mpt.GShare;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
 				SUPPORTS_MACCATALYST = NO;
@@ -6533,11 +6537,13 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = NO;
 				CODE_SIGN_ENTITLEMENTS = "$(SRCROOT)/Brand/iOSClient.entitlements";
+				CURRENT_PROJECT_VERSION = 5;
 				DEAD_CODE_STRIPPING = YES;
 				GCC_SYMBOLS_PRIVATE_EXTERN = YES;
 				INFOPLIST_FILE = "$(SRCROOT)/Brand/iOSClient.plist";
+				MARKETING_VERSION = 1.0.3;
 				OTHER_LDFLAGS = "";
-				PRODUCT_BUNDLE_IDENTIFIER = "it.twsweb.$(PRODUCT_NAME:rfc1034identifier)";
+				PRODUCT_BUNDLE_IDENTIFIER = com.gov.mpt.GShare;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
 				SUPPORTS_MACCATALYST = NO;
@@ -6577,7 +6583,7 @@
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
-				PRODUCT_BUNDLE_IDENTIFIER = "it.twsweb.Nextcloud.Action-Assistant";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.gov.mpt.GShare.Action-Assistant";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 				STRING_CATALOG_GENERATE_SYMBOLS = YES;
@@ -6617,7 +6623,7 @@
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
-				PRODUCT_BUNDLE_IDENTIFIER = "it.twsweb.Nextcloud.Action-Assistant";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.gov.mpt.GShare.Action-Assistant";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 				STRING_CATALOG_GENERATE_SYMBOLS = YES;
@@ -6656,7 +6662,7 @@
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				OTHER_LDFLAGS = "";
-				PRODUCT_BUNDLE_IDENTIFIER = it.twsweb.Nextcloud.WidgetDashboardIntentHandler;
+				PRODUCT_BUNDLE_IDENTIFIER = com.gov.mpt.GShare.WidgetDashboardIntentHandler;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
 				SUPPORTS_MACCATALYST = NO;
@@ -6695,7 +6701,7 @@
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				OTHER_LDFLAGS = "";
-				PRODUCT_BUNDLE_IDENTIFIER = it.twsweb.Nextcloud.WidgetDashboardIntentHandler;
+				PRODUCT_BUNDLE_IDENTIFIER = com.gov.mpt.GShare.WidgetDashboardIntentHandler;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
 				SUPPORTS_MACCATALYST = NO;
@@ -6885,7 +6891,7 @@
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
-				PRODUCT_BUNDLE_IDENTIFIER = it.twsweb.Nextcloud.BackgroundUploadExtension;
+				PRODUCT_BUNDLE_IDENTIFIER = com.gov.mpt.GShare.BackgroundUploadExtension;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				REGISTER_APP_GROUPS = YES;
 				SDKROOT = iphoneos;
@@ -6942,7 +6948,7 @@
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
-				PRODUCT_BUNDLE_IDENTIFIER = it.twsweb.Nextcloud.BackgroundUploadExtension;
+				PRODUCT_BUNDLE_IDENTIFIER = com.gov.mpt.GShare.BackgroundUploadExtension;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				REGISTER_APP_GROUPS = YES;
 				SDKROOT = iphoneos;

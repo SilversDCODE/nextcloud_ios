@@ -7,13 +7,10 @@ import SwiftUI
 import UIKit
 import Combine
 import NextcloudKit
-import FirebaseCrashlytics
 
 /// Settings view for Nextcloud
 @MainActor
 struct NCSettingsView: View {
-    // State to control the visibility of the acknowledgements view
-    @State private var showAcknowledgements = false
     // State to control the visibility of the passcode view
     @State private var showPasscode = false
     // State to contorl the visibility of the change passcode view
@@ -22,11 +19,9 @@ struct NCSettingsView: View {
     @State private var showBrowser = false
     // State to control the visibility of the Source Code  view
     @State private var showSourceCode = false
-#if DEBUG
-    @State private var isExportingDatabase = false
-    @State private var showDatabaseExportError = false
-    @State private var databaseExportError = ""
-#endif
+    // State to control selected language
+    @State private var selectedLanguageCode = NCLanguageManager.shared.currentLanguageCode
+    @State private var refreshId = UUID()
     // Object of ViewModel of this view
     @ObservedObject var model: NCSettingsModel
 
@@ -189,6 +184,28 @@ struct NCSettingsView: View {
             if capabilities.e2EEEnabled {
                 E2EESection(model: model)
             }
+            // `Language` Section
+            Section(header: Text(NSLocalizedString("_language_", comment: "")).font(.headline)) {
+                Picker(selection: $selectedLanguageCode, label: HStack {
+                    Image(systemName: "globe")
+                        .font(.icon())
+                        .foregroundColor(Color(NCBrandColor.shared.iconImageColor))
+                        .frame(width: 39)
+
+                    Text(NSLocalizedString("_language_", comment: ""))
+                        .font(.body)
+                }) {
+                    Text(NSLocalizedString("_system_default_", comment: "")).tag("")
+                    Text("English").tag("en")
+                    Text("ພາສາລາວ").tag("lo")
+                }
+                .pickerStyle(.menu)
+                .onChange(of: selectedLanguageCode) { newValue in
+                    NCLanguageManager.shared.currentLanguageCode = newValue
+                    refreshId = UUID()
+                    model.controller?.currentNavigationController()?.topViewController?.title = NSLocalizedString("_settings_", comment: "")
+                }
+            }
             // `Advanced` Section
             Section {
                 NavigationLink(destination: LazyView {
@@ -207,24 +224,6 @@ struct NCSettingsView: View {
             }
             // `Information` Section
             Section(header: Text(NSLocalizedString("_information_", comment: "")).font(.headline), content: {
-                // Acknowledgements
-                Button(action: {
-                    showAcknowledgements.toggle()
-                }, label: {
-                    HStack {
-                        Image(systemName: "figure.2.circle")
-                            .font(.icon())
-                            .foregroundColor(Color(NCBrandColor.shared.iconImageColor))
-                            .frame(width: 39)
-
-                        Text(NSLocalizedString("_acknowledgements_", comment: ""))
-                            .font(.body)
-                    }
-                })
-                .tint(Color(NCBrandColor.shared.textColor))
-                .sheet(isPresented: $showAcknowledgements) {
-                    NCAcknowledgementsView(browserTitle: NSLocalizedString("_acknowledgements_", comment: ""))
-                }
                 // Terms & Privacy Conditions
                 Button(action: {
                     showBrowser.toggle()
@@ -264,39 +263,6 @@ struct NCSettingsView: View {
                     }
                 }
             })
-#if DEBUG
-            Section(header: Text("Debug").font(.headline), content: {
-                Button(action: exportDebugDatabase, label: {
-                    HStack {
-                        Image(systemName: "cylinder.split.1x2")
-                            .font(.icon())
-                            .foregroundColor(.orange)
-                            .frame(width: 39)
-
-                        Text(isExportingDatabase ? "Exporting GRDB database…" : "Export GRDB database")
-                            .font(.body)
-                    }
-                })
-                .tint(Color(NCBrandColor.shared.textColor))
-                .disabled(isExportingDatabase)
-
-                Button(action: {
-                    Crashlytics.crashlytics().log("Test crash triggered")
-                    fatalError("🔥 Crash test")
-                }, label: {
-                    HStack {
-                        Image(systemName: "flame.fill")
-                            .font(.icon())
-                            .foregroundColor(.red)
-                            .frame(width: 39)
-
-                        Text("Test crash triggered")
-                            .font(.body)
-                    }
-                })
-                .tint(Color(NCBrandColor.shared.textColor))
-            })
-#endif
 
             // `Watermark` Section
             Section(content: {
@@ -305,61 +271,19 @@ struct NCSettingsView: View {
                     .font(.footnote)
             })
         }
+        .id(refreshId)
         .sheet(isPresented: $showPasscode) {
             SetupPasscodeView(isLockActive: $model.isLockActive, controller: model.controller)
         }
         .sheet(isPresented: $showChangePasscode) {
             SetupPasscodeView(isLockActive: $model.isLockActive, controller: model.controller, changePasscode: true)
         }
-#if DEBUG
-        .alert("Database export failed", isPresented: $showDatabaseExportError) {
-            Button("OK", role: .cancel) { }
-        } message: {
-            Text(databaseExportError)
-        }
-#endif
         .navigationBarTitle(NSLocalizedString("_settings_", comment: ""))
         .defaultViewModifier(model)
-    }
-
-#if DEBUG
-    private func exportDebugDatabase() {
-        isExportingDatabase = true
-
-        Task {
-            defer { isExportingDatabase = false }
-
-            do {
-                let exportURL = try await Task.detached(priority: .userInitiated) {
-                    try NCLocalDatabase.shared.exportDebugDatabase()
-                }.value
-
-                guard let controller = model.controller else {
-                    throw CocoaError(.coderInvalidValue)
-                }
-                let presentingViewController = controller.topMostViewController()
-
-                let activityViewController = UIActivityViewController(
-                    activityItems: [exportURL],
-                    applicationActivities: nil
-                )
-                if let popover = activityViewController.popoverPresentationController {
-                    popover.sourceView = presentingViewController.view
-                    popover.sourceRect = CGRect(
-                        x: presentingViewController.view.bounds.midX,
-                        y: presentingViewController.view.bounds.midY,
-                        width: 0,
-                        height: 0
-                    )
-                }
-                presentingViewController.present(activityViewController, animated: true)
-            } catch {
-                databaseExportError = error.localizedDescription
-                showDatabaseExportError = true
-            }
+        .onAppear {
+            selectedLanguageCode = NCLanguageManager.shared.currentLanguageCode
         }
     }
-#endif
 }
 
 struct E2EESection: View {

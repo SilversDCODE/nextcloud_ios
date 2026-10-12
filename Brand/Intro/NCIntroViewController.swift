@@ -17,7 +17,14 @@ class NCIntroViewController: UIViewController, UICollectionViewDataSource, UICol
     var controller: NCMainTabBarController?
 
     private let appDelegate = (UIApplication.shared.delegate as? AppDelegate)!
-    private let titles = [NSLocalizedString("_intro_1_title_", comment: ""), NSLocalizedString("_intro_2_title_", comment: ""), NSLocalizedString("_intro_3_title_", comment: ""), NSLocalizedString("_intro_4_title_", comment: "")]
+    private var titles: [String] {
+        [
+            NSLocalizedString("_intro_1_title_", comment: ""),
+            NSLocalizedString("_intro_2_title_", comment: ""),
+            NSLocalizedString("_intro_3_title_", comment: ""),
+            NSLocalizedString("_intro_4_title_", comment: "")
+        ]
+    }
     private let images = [UIImage(named: "intro1"), UIImage(named: "intro2"), UIImage(named: "intro3"), UIImage(named: "intro4")]
     private var timer: Timer?
     private var textColor: UIColor = .white
@@ -51,6 +58,10 @@ class NCIntroViewController: UIViewController, UICollectionViewDataSource, UICol
         self.navigationController?.view.backgroundColor = NCBrandColor.shared.customer
         self.navigationController?.navigationBar.tintColor = textColor
 
+        let languageButton = UIBarButtonItem(image: UIImage(systemName: "globe"), style: .plain, target: self, action: #selector(actionSelectLanguage(_:)))
+        languageButton.tintColor = textColor
+        navigationItem.leftBarButtonItem = languageButton
+
         if !NCManageDatabase.shared.getAllTableAccount().isEmpty {
             let navigationItemCancel = UIBarButtonItem(image: UIImage(systemName: "xmark"), style: .plain, target: self, action: #selector(actionCancel(_:)))
             navigationItemCancel.tintColor = textColor
@@ -70,10 +81,12 @@ class NCIntroViewController: UIViewController, UICollectionViewDataSource, UICol
         buttonSignUp.backgroundColor = textColor.withAlphaComponent(0.2)
         buttonSignUp.titleLabel?.adjustsFontSizeToFitWidth = true
         buttonSignUp.setTitle(NSLocalizedString("_sign_up_", comment: ""), for: .normal)
+        buttonSignUp.isHidden = NCBrandOptions.shared.linkloginPreferredProviders.isEmpty
 
         buttonHost.layer.cornerRadius = 20
         buttonHost.setTitle(NSLocalizedString("_host_your_own_server", comment: ""), for: .normal)
         buttonHost.setTitleColor(textColor.withAlphaComponent(0.5), for: .normal)
+        buttonHost.isHidden = NCBrandOptions.shared.linkLoginHost.isEmpty
 
         introCollectionView.register(UINib(nibName: "NCIntroCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: "introCell")
         introCollectionView.dataSource = self
@@ -176,6 +189,34 @@ class NCIntroViewController: UIViewController, UICollectionViewDataSource, UICol
     @IBAction func host(_ sender: Any) {
         guard let url = URL(string: NCBrandOptions.shared.linkLoginHost) else { return }
         UIApplication.shared.open(url)
+    }
+
+    @objc func actionSelectLanguage(_ sender: Any?) {
+        let alert = UIAlertController(title: NSLocalizedString("_select_language_", comment: ""), message: nil, preferredStyle: .actionSheet)
+        alert.addAction(UIAlertAction(title: NSLocalizedString("_system_default_", comment: ""), style: .default, handler: { _ in
+            NCLanguageManager.shared.currentLanguageCode = ""
+            self.refreshLocalizedTexts()
+        }))
+        alert.addAction(UIAlertAction(title: "English", style: .default, handler: { _ in
+            NCLanguageManager.shared.currentLanguageCode = "en"
+            self.refreshLocalizedTexts()
+        }))
+        alert.addAction(UIAlertAction(title: "ພາສາລາວ", style: .default, handler: { _ in
+            NCLanguageManager.shared.currentLanguageCode = "lo"
+            self.refreshLocalizedTexts()
+        }))
+        alert.addAction(UIAlertAction(title: NSLocalizedString("_cancel_", comment: ""), style: .cancel))
+        if let popover = alert.popoverPresentationController {
+            popover.barButtonItem = navigationItem.leftBarButtonItem
+        }
+        present(alert, animated: true)
+    }
+
+    private func refreshLocalizedTexts() {
+        buttonLogin.setTitle(NSLocalizedString("_log_in_", comment: ""), for: .normal)
+        buttonSignUp.setTitle(NSLocalizedString("_sign_up_", comment: ""), for: .normal)
+        buttonHost.setTitle(NSLocalizedString("_host_your_own_server", comment: ""), for: .normal)
+        introCollectionView.reloadData()
     }
 }
 

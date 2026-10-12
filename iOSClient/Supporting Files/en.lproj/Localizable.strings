@@ -927,3 +927,8 @@ You can stop it at any time, adjust the settings, and enable it again.";
 "_add_to_album"                                     = "Add to Album";
 "_remove_from_album_"                               = "Remove from Album";
 "_want_remove_from_album_"                          = "Do you really want to remove from Album?";
+
+"_language_"                                        = "Language";
+"_select_language_"                                 = "Select Language";
+"_system_default_"                                  = "System Default";
+"_language_changed_restart_note_"                   = "Language changed. Please restart the app for changes to take full effect.";

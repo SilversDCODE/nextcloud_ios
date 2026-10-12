@@ -53,6 +53,12 @@ final class NCMoreModel: ObservableObject {
 
     init(controller: NCMainTabBarController?) {
         self.controller = controller
+
+        NotificationCenter.default.addObserver(forName: NCLanguageManager.notificationLanguageChanged, object: nil, queue: .main) { [weak self] _ in
+            Task { @MainActor [weak self] in
+                await self?.loadItems()
+            }
+        }
     }
 
     /// A visible section in the More screen.

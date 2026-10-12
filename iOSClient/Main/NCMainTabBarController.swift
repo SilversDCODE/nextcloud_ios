@@ -59,6 +59,10 @@ class NCMainTabBarController: UITabBarController {
             }
         }
 
+        NotificationCenter.default.addObserver(forName: NCLanguageManager.notificationLanguageChanged, object: nil, queue: .main) { [weak self] _ in
+            self?.refreshTabBarItemsLocalization()
+        }
+
         NotificationCenter.default.addObserver(forName: NSNotification.Name(rawValue: self.global.notificationCenterCheckUserDelaultErrorDone), object: nil, queue: nil) { notification in
             if let userInfo = notification.userInfo,
                let account = userInfo["account"] as? String,
@@ -165,6 +169,21 @@ class NCMainTabBarController: UITabBarController {
         item.image = UIImage(systemName: imageName)
         item.selectedImage = item.image
         item.tag = tag
+    }
+
+    func refreshTabBarItemsLocalization() {
+        configureTabBarItems()
+        if let viewControllers {
+            for vc in viewControllers {
+                if let moreNav = vc as? NCMoreNavigationController {
+                    moreNav.tabBarItem.title = NSLocalizedString("_more_", comment: "")
+                    moreNav.topViewController?.title = NSLocalizedString("_more_", comment: "")
+                } else if let nav = vc as? UINavigationController, nav.tabBarItem.tag == 104 {
+                    nav.tabBarItem.title = NSLocalizedString("_more_", comment: "")
+                    nav.topViewController?.title = NSLocalizedString("_more_", comment: "")
+                }
+            }
+        }
     }
 
     @MainActor

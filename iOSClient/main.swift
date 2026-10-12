@@ -9,6 +9,8 @@ import UIKit
 /// This call bootstraps the UIKit application using a custom `UIApplication`
 /// subclass (`NCApplication`) in order to intercept and observe low-level
 /// user interaction events globally.
+NCLanguageManager.shared.applyLanguage()
+
 UIApplicationMain(
     CommandLine.argc,
     CommandLine.unsafeArgv,
