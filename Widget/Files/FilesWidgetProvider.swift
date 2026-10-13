@@ -19,7 +19,7 @@ struct FilesWidgetProvider: IntentTimelineProvider {
 
     func getSnapshot(for configuration: AccountIntent, in context: Context, completion: @escaping (Entry) -> Void) {
         Task {
-            let entry = await getFilesDataEntry(configuration: configuration, isPreview: false, displaySize: context.displaySize)
+            let entry = await getFilesDataEntry(configuration: configuration, isPreview: context.isPreview, displaySize: context.displaySize)
             completion(entry)
         }
     }

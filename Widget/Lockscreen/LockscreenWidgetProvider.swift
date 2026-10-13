@@ -16,7 +16,7 @@ struct LockscreenWidgetProvider: IntentTimelineProvider {
     }
 
     func getSnapshot(for configuration: AccountIntent, in context: Context, completion: @escaping (Entry) -> Void) {
-        getLockscreenDataEntry(configuration: configuration, isPreview: false, family: context.family) { entry in
+        getLockscreenDataEntry(configuration: configuration, isPreview: context.isPreview, family: context.family) { entry in
             completion(entry)
         }
     }

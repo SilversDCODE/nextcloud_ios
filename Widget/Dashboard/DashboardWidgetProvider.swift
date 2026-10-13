@@ -12,8 +12,8 @@ struct DashboardWidgetProvider: IntentTimelineProvider {
     typealias Entry = DashboardDataEntry
 
     func placeholder(in context: Context) -> Entry {
-        let dashboardItems = getDashboardItems(displaySize: context.displaySize, withButton: false)
-        let datasPlaceholder = Array(dashboardDatasTest[0...dashboardItems])
+        let dashboardItems = max(1, getDashboardItems(displaySize: context.displaySize, withButton: false))
+        let datasPlaceholder = Array(dashboardDatasTest[0..<min(dashboardItems, dashboardDatasTest.count)])
         let title = "Dashboard"
         let titleImage = UIImage(systemName: "circle.fill") ?? UIImage()
         return Entry(date: Date(), datas: datasPlaceholder, dashboard: nil, buttons: nil, isPlaceholder: true, isEmpty: false, titleImage: titleImage, title: title, footerImage: "checkmark.icloud", footerText: NCBrandOptions.shared.brand + " widget", account: "")
@@ -21,7 +21,7 @@ struct DashboardWidgetProvider: IntentTimelineProvider {
 
     func getSnapshot(for configuration: DashboardIntent, in context: Context, completion: @escaping (DashboardDataEntry) -> Void) {
         Task {
-            let entry = await getDashboardDataEntry(configuration: configuration, isPreview: false, displaySize: context.displaySize)
+            let entry = await getDashboardDataEntry(configuration: configuration, isPreview: context.isPreview, displaySize: context.displaySize)
             completion(entry)
         }
     }

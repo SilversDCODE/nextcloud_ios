@@ -6,13 +6,13 @@
 	<true/>
 	<key>com.apple.security.application-groups</key>
 	<array>
-		<string>group.com.gov.mpt.GShare</string>
+		<string>group.com.gov.mpt.GShare.apps</string>
 	</array>
 	<key>com.apple.security.network.client</key>
 	<true/>
 	<key>keychain-access-groups</key>
 	<array>
-		<string>$(AppIdentifierPrefix)group.com.gov.mpt.GShare</string>
+		<string>$(AppIdentifierPrefix)group.com.gov.mpt.GShare.apps</string>
 	</array>
 </dict>
 </plist>

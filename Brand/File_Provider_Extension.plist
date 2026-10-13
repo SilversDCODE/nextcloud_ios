@@ -33,7 +33,7 @@
         		<true/>
     		</dict>
 		<key>NSExtensionFileProviderDocumentGroup</key>
-		<string>group.com.gov.mpt.GShare</string>
+		<string>group.com.gov.mpt.GShare.apps</string>
 		<key>NSExtensionFileProviderSupportsEnumeration</key>
 		<true/>
 		<key>NSExtensionFileProviderSupportsPickingFolders</key>

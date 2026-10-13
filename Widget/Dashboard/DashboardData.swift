@@ -47,20 +47,22 @@ let dashboardDatasTest: [DashboardData] = [
 ]
 
 func getDashboardItems(displaySize: CGSize, withButton: Bool) -> Int {
+    let rawItems: Int
     if withButton {
-        let items = Int((displaySize.height - 90) / 55)
-        return items
+        rawItems = Int((displaySize.height - 90) / 55)
     } else {
-        let items = Int((displaySize.height - 50) / 55)
-        return items
+        rawItems = Int((displaySize.height - 50) / 55)
     }
+    // Safeguard for zero or unmeasured displaySize (e.g. simulator launch, placeholders)
+    let maxAvailable = dashboardDatasTest.count - 1
+    return max(0, min(rawItems, maxAvailable))
 }
 
 func getDashboardDataEntry(configuration: DashboardIntent?, isPreview: Bool, displaySize: CGSize) async -> DashboardDataEntry {
     let utilityFileSystem = NCUtilityFileSystem()
     let utility = NCUtility()
-    let dashboardItems = getDashboardItems(displaySize: displaySize, withButton: false)
-    let datasPlaceholder = Array(dashboardDatasTest[0...dashboardItems - 1])
+    let dashboardItems = max(1, getDashboardItems(displaySize: displaySize, withButton: false))
+    let datasPlaceholder = Array(dashboardDatasTest[0..<min(dashboardItems, dashboardDatasTest.count)])
     var activeTableAccount: tableAccount?
     let versionApp = NCUtility().getVersionMaintenance()
 

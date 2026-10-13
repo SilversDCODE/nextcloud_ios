@@ -14,7 +14,7 @@ struct ToolbarWidgetProvider: TimelineProvider {
     }
 
     func getSnapshot(in context: Context, completion: @escaping (Entry) -> Void) {
-        getToolbarDataEntry(isPreview: false) { entry in
+        getToolbarDataEntry(isPreview: context.isPreview) { entry in
             completion(entry)
         }
     }
